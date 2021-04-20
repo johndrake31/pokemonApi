@@ -10,6 +10,9 @@
 //slice(42, -1)
 
 
+
+
+
 function myFetch(url) {
     return fetch(url)
         .then((res) => res.json())
@@ -51,13 +54,17 @@ myFetch('https://pokeapi.co/api/v2/generation/1/')
                         <p>${"Nom Français: " + newData2.names[4].name}</p>
                         <a href="" class="more">Plus d'informations</a>
                         `);
-                    //click function popout model
-                    $('.more').append(eSection);
-                    eSection.on('click', (e) => {
-                        let eTar = e.target;
-                        console.log(eTar);
+                    $('#pokemon').append(eSection);
+
+                    /**
+                     * click function popout model
+                     */
+                    $(eSection).click(function () {
+
                     })
+
                 })
             //end of 2nd fetch
+
         }
     })
