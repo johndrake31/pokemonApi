@@ -1,0 +1,28 @@
+h1{
+    color: red;
+}
+.pokemonClass{
+    border: 2px solid rgba(0, 0, 0, 0.401);
+    margin: 12px;
+    padding: 12px;
+    width: 370px;
+    background-image:  url(../PikPng.com_ash-ketchum-png_1765284.png);
+    background-position: top 50px right 50px;
+    background-size: 100px;
+    background-repeat:no-repeat;
+}
+.shading{
+    background-color: rgba(213, 130, 48, 0.25);
+}
+.my-img{
+    max-height: 50px;
+    max-width: auto;
+}
+#pokemon{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cap-first{
+    text-transform: capitalize;
+}
