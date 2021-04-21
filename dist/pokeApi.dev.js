@@ -38,8 +38,8 @@ myFetch('https://pokeapi.co/api/v2/generation/1/').then(function (data) {
     eSection.attr('data-url', type[i].url); //2nd Fetch
 
     myFetch(type[i].url).then(function (newData2) {
-      var myString = " est une \xE9volution de <span data-parent-url=\"".concat(type[i].url, "\">").concat(type[i].name, "</span> ");
-      eSection.html("<h2 class=\"cap-first\" >".concat(type[i].name, "</h2> \n                        <img class=\"my-img\" src=\"https://assets.pokemon.com/assets/cms2/img/pokedex/full/").concat(pokeID, ".png\"\n                        alt = \"").concat(type[i].name, "\">\n                        <p>").concat(newData2.evolves_from_species ? newData2.evolves_from_species.name + myString : "Orginal Pokemon", "</p>\n                        <p>").concat("Nom Français: " + newData2.names[4].name, "</p>\n                        <p class=\"close-btn\"><strong>Plus d'informations</strong></a>\n                        "));
+      var myString = " se transforme en <span data-parent-url=\"".concat(type[i].url, "\">").concat(type[i].name, "</span> ");
+      eSection.html("<h2 class=\"cap-first\" >".concat(pokeID, ": ").concat(type[i].name, "</h2> \n                        <img class=\"my-img\" src=\"https://assets.pokemon.com/assets/cms2/img/pokedex/full/").concat(pokeID, ".png\"\n                        alt = \"").concat(type[i].name, "\">\n                        <p>").concat(newData2.evolves_from_species ? newData2.evolves_from_species.name + myString : "Orginal Pokemon", "</p>\n                        <p>").concat("Nom Français: " + newData2.names[4].name, "</p>\n                        <p class=\"close-btn\"><strong>Plus d'informations</strong></a>\n                        "));
       $('#pokemon').append(eSection);
       /**
        * click function popout model
@@ -55,7 +55,7 @@ myFetch('https://pokeapi.co/api/v2/generation/1/').then(function (data) {
           myModel.removeClass("d-full").addClass("d-none");
         });
       });
-    }); //end of 2nd fetch
+    }); //end of 2nd fetch section
   };
 
   for (var i = 0; i < type.length; i++) {

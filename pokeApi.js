@@ -42,9 +42,9 @@ myFetch('https://pokeapi.co/api/v2/generation/1/')
             //2nd Fetch
             myFetch(type[i].url)
                 .then(function (newData2) {
-                    let myString = ` est une évolution de <span data-parent-url="${type[i].url}">${type[i].name}</span> `
+                    let myString = ` se transforme en <span data-parent-url="${type[i].url}">${type[i].name}</span> `
                     eSection.html(
-                        `<h2 class="cap-first" >${type[i].name}</h2> 
+                        `<h2 class="cap-first" >${pokeID}: ${type[i].name}</h2> 
                         <img class="my-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokeID}.png"
                         alt = "${type[i].name}">
                         <p>${newData2.evolves_from_species? 
@@ -81,8 +81,8 @@ myFetch('https://pokeapi.co/api/v2/generation/1/')
 
                     })
 
-                })
-            //end of 2nd fetch
+                }) //end of 2nd fetch section
+
 
         }
     })
