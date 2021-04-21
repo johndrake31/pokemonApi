@@ -1,8 +1,20 @@
+body{
+    background-image: linear-gradient(to top right, rgba(0, 0, 255, 0.415), rgba(255, 255, 255, 0.381)), url(../fond-ecran-hd-pokemon-3.jpeg);
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    
+}
 h1{
     color: red;
 }
 .pokemonClass{
     border: 2px solid rgba(0, 0, 0, 0.401);
+    border-radius: 12px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
     margin: 12px;
     padding: 12px;
     width: 370px;
@@ -10,19 +22,52 @@ h1{
     background-position: top 50px right 50px;
     background-size: 100px;
     background-repeat:no-repeat;
+    
 }
 .shading{
-    background-color: rgba(213, 130, 48, 0.25);
+    background-color: rgba(255, 255, 255, 0.826);
 }
 .my-img{
     max-height: 50px;
     max-width: auto;
 }
+
+.close-btn{
+    cursor: pointer;
+    text-align: right;
+    
+}
+.cap-first{
+    text-transform: capitalize;
+}
+.d-none{
+    display: none;
+}
+.d-full{
+    display: block;
+}
+.popout{
+    
+    border: 2px solid rgba(0, 0, 0, 0.401);
+    border-radius: 12px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    width: 420px;
+    background-image:  url(../PikPng.com_ash-ketchum-png_1765284.png);
+    background-position: top 50px right 50px;
+    background-size: 100px;
+    background-repeat:no-repeat;
+    background-color: whitesmoke;
+    
+}
+#myModel{
+    position: fixed;
+    z-index: 100;
+    top: 30%;
+    left: 25%;
+}
+
 #pokemon{
     display: flex;
     flex-wrap: wrap;
-}
-
-.cap-first{
-    text-transform: capitalize;
 }
